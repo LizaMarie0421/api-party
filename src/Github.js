@@ -6,11 +6,11 @@ import './Github.css'
 class Github extends Component {
     state = {
         username: '',
-
-
     }
     handleChange =(ev) => {
-        this.setState({username: ev.target.value})
+        this.setState({
+            username: ev.target.value
+        })
     }
     handleSubmit = (ev) =>{
         ev.preventDefault()
@@ -26,7 +26,10 @@ class Github extends Component {
                 alt='github logo' />
                 <form onSubmit={this.handleSubmit}>
                     <div>
-                        <input type='text' value={this.state.username} onChange={this.handleChange} />
+                        <input 
+                        type='text' 
+                        value={this.state.username} 
+                        onChange={this.handleChange} />
                     </div>
                     <div>
                         <button>Look up Github user</button>
